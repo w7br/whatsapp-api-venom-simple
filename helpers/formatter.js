@@ -1,11 +1,11 @@
 const phoneNumberFormatter = function (number) {
-    // 1. Menghilangkan karakter selain angka
+    // 1. Remove caracteres que não sejam números
     let formatted = number.replace(/\D/g, '');
 
-    // 2. Menghilangkan angka 0 di depan (prefix)
-    //    Kemudian diganti dengan 62
+    // 2. Elimine o 0 inicial (prefixo)
+    //    Em seguida, substituído por 55
     if (formatted.startsWith('0')) {
-        formatted = '62' + formatted.substr(1);
+        formatted = '55' + formatted.substr(1);
     }
 
     if (!formatted.endsWith('@c.us')) {
